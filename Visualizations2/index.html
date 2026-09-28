@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Iris Radar Chart | Data Visualization</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<main class="page-shell">
+		<header class="page-header">
+			<p class="eyebrow">IRIS DATA / RADAR CHART</p>
+			<h1>Species Profile Radar Chart</h1>
+			<p class="intro">Compare the overall sepal and petal profiles using the average measurements for each species.</p>
+		</header>
+
+		<section class="chart-panel" aria-labelledby="chart-title">
+			<div class="panel-heading">
+				<div>
+					<p class="section-label">AVERAGE MEASUREMENTS</p>
+					<h2 id="chart-title">Iris species profile</h2>
+				</div>
+				<span id="data-status" class="data-status">Loading data...</span>
+			</div>
+
+			<div class="chart-wrap">
+				<svg id="radar-chart" role="img" aria-label="Iris species average measurements radar chart"></svg>
+				<div id="chart-tooltip" class="chart-tooltip" role="status" hidden></div>
+			</div>
+
+			<div id="legend" class="legend" aria-label="Species legend"></div>
+			<div id="error-message" class="error-message" role="alert" hidden></div>
+		</section>
+	</main>
+	<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+	<script src="script.js"></script>
+</body>
+</html>

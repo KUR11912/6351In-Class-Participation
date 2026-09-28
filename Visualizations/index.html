@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Iris Heatmap | Data Visualization</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<main class="page-shell">
+		<header class="page-header">
+			<p class="eyebrow">IRIS DATA / HEATMAP</p>
+			<h1>Iris Measurement Heatmap</h1>
+			<p class="intro">Each row represents a flower and each column represents a measurement. Darker colors indicate larger values.</p>
+		</header>
+
+		<section class="data-panel" aria-labelledby="data-title">
+			<div class="panel-heading">
+				<div>
+					<p class="section-label">DATASET / IRIS.DATA</p>
+					<h2 id="data-title">Four Measurements</h2>
+				</div>
+				<div class="dataset-meta" aria-live="polite">
+					<strong id="row-count">0</strong>
+					<span>rows</span>
+					<i></i>
+					<strong id="species-count">0</strong>
+					<span>species</span>
+				</div>
+			</div>
+
+			<div class="controls" aria-label="Species filter">
+				<span class="control-label">FILTER SPECIES</span>
+				<div id="species-controls" class="species-controls"></div>
+			</div>
+
+			<div class="heatmap-scroll">
+				<div class="canvas-wrap">
+					<canvas id="correlation-canvas" aria-label="Iris correlation heatmap"></canvas>
+					<div id="heatmap-tooltip" class="heatmap-tooltip" role="status"></div>
+				</div>
+			</div>
+
+			<div class="legend" aria-label="Color legend">
+				<span>-1</span>
+				<div class="legend-gradient"></div>
+				<span>+1</span>
+			</div>
+
+			<footer class="panel-footer" aria-live="polite">
+				<span class="status-dot"></span>
+				<span id="data-status">Loading data/iris.data...</span>
+			</footer>
+			<div id="error-message" class="error-message" role="alert" hidden></div>
+		</section>
+	</main>
+	<script src="script.js"></script>
+</body>
+</html>
